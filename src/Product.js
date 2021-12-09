@@ -14,9 +14,10 @@ function Product({item}) {
         <small>$</small>     
         <strong>{item.price}</strong>
         </p> 
-        {/* <div className="product__rating">
-
-        </div> */}
+        <div className="product__rating">
+          {Array(item.rating).fill().map((_,i) => (<p>🌟</p>))}
+          
+        </div>
      </div>
         <img src={item.image} alt={item.info}/>
         <button>Add to Basket</button>
